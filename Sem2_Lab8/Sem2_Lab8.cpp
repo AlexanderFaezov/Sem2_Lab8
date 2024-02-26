@@ -11,6 +11,8 @@ struct Stadium {
 };
 
 int main() {
+    setlocale(LC_ALL, "ru");
+
     int mainYear = 2010;
     Stadium StadiumDop1;
     Stadium StadiumDop2;
@@ -22,19 +24,21 @@ int main() {
     Stadium1.sportsTypes = "Коньки, лыжи, плавание";
 
     Stadium Stadium2;
-    Stadium1.name = "name2";
-    Stadium1.yearBuilt = 2012;
-    Stadium1.numberOfCourts = 5;
-    Stadium1.sportsTypes = "Коньки, лыжи, плавание, стрельба, пинг-понг";
+    Stadium2.name = "name2";
+    Stadium2.yearBuilt = 2012;
+    Stadium2.numberOfCourts = 5;
+    Stadium2.sportsTypes = "Коньки, лыжи, плавание, стрельба, пинг-понг";
 
     Stadium Stadium3;
-    Stadium1.name = "name3";
-    Stadium1.yearBuilt = 2008;
-    Stadium1.numberOfCourts = 2;
-    Stadium1.sportsTypes = "Лыжи, плавание";
+    Stadium3.name = "name3";
+    Stadium3.yearBuilt = 2002;
+    Stadium3.numberOfCourts = 2;
+    Stadium3.sportsTypes = "Лыжи, плавание";
 
-    if (mainYear <= Stadium1.yearBuilt)
+    if (Stadium1.yearBuilt < mainYear)
     {
+        cout << "Стадион " << Stadium1.name << " не соответствует требованиям" << endl;
+
         Stadium1.name = " ";
         Stadium1.yearBuilt = 0;
         Stadium1.numberOfCourts = 0;
@@ -43,8 +47,10 @@ int main() {
         StadiumDop1.yearBuilt = 2004;
         StadiumDop2.yearBuilt = 2020;
     }
-    if (mainYear >= Stadium2.yearBuilt)
+    if (Stadium2.yearBuilt < mainYear)
     {
+        cout << "Стадион " << Stadium2.name << " не соответствует требованиям" << endl;
+
         Stadium2.name = " ";
         Stadium2.yearBuilt = 0;
         Stadium2.numberOfCourts = 0;
@@ -53,8 +59,10 @@ int main() {
         StadiumDop1.yearBuilt = 2004;
         StadiumDop2.yearBuilt = 2020;
     }
-    if (mainYear >= Stadium3.yearBuilt)
+    if (Stadium1.yearBuilt < mainYear)
     {
+        cout << "Стадион " << Stadium3.name << " не соответствует требованиям" << endl;
+
         Stadium3.name = " ";
         Stadium3.yearBuilt = 0;
         Stadium3.numberOfCourts = 0;
